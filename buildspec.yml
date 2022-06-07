@@ -2,7 +2,9 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - npm ci
+      - echo Entered the install phase...
+      - npm install --global lerna 
+      - lerna bootstrap --concurrency=1 -- --production
   build:
     commands:
       - npm run build
