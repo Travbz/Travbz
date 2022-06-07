@@ -1,40 +1,29 @@
+
+  
 version: 0.2
 
-phases: 
-    install:
-        runtime-versions:
-            nodejs: latest
-        commands:
-            - echo "Installing packages"
-            #install node12
-            - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-            - . ~/.nvm/nvm.sh
-            - nvm install node
-            - node -e "console.log('Running Node.js ' + process.version)"
-            #install yarn
-            - curl -o- -L https://yarnpkg.com/install.sh | bash
-            - source ~/.bashrc
-            - yum install --no-install-recommends yard
-    pre_build:
-        commands: 
-            - #install dependencies
-            - echo "installing dependancies"
-            - yarn
-    build:
-        commands:
-            - echo "we are in the build block"
-            - echo "we will run some tests on yarn"
-            - yarn test
-            - echo "Building..."
-            - yarn build
-artifacts:
-    files:
-    - "**/*"
-    discard-paths: no 
-    base-directory: /
-post_build:
+phases:
+  install:
     commands:
-        - echo "we are in the post build phase"
-            
-
-            
+      - echo Installing Node 12...
+      - curl -sL https://deb.nodesource.com/setup_12.x | bash -
+      - apt install -y nodejs
+      - echo Installing Yarn...
+      - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+      - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+      - apt install --no-install-recommends yarn
+  pre_build:
+    commands:
+      - echo Installing dependencies...
+      - yarn
+  build:
+    commands:
+      - echo Testing...
+      - yarn test
+      - echo Building...
+      - yarn build
+artifacts:
+  files:
+    - "**/*"
+  discard-paths: no
+  base-directory: Travbz.github.io
