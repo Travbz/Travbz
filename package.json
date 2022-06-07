@@ -15,8 +15,7 @@
     },
     "scripts": {
       "build": "rm -rf index.html",
-      "test": "jest",
-      "watch": "index.html"
+      "test": "jest"
     },
     "dependencies": {
       "react": ">= 16.3.0",
