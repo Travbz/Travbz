@@ -5,9 +5,7 @@ phases:
         runtime-versions:
             nodejs: latest
         commands:
-            echo "Installing packages"
-            #install curl
-            - sudo yum -y install curl
+            - echo "Installing packages"
             #install node12
             - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
             - . ~/.nvm/nvm.sh
