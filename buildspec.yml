@@ -27,14 +27,14 @@ phases:
             - yarn test
             - echo "Building..."
             - yarn build
-    artifacts:
-      files:
-        - "**/*"
-      discard-paths: no 
-      base-directory: /
-    post_build:
-        commands:
-            - echo "we are in the post build phase"
+artifacts:
+    files:
+    - "**/*"
+    discard-paths: no 
+    base-directory: /
+post_build:
+    commands:
+        - echo "we are in the post build phase"
             
 
             
