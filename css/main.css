@@ -80,7 +80,7 @@
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-brown,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-brown {
   color: #fff;
-  background: #bc2a36; }
+  background: #378C3F; }
 /* original green #378C3F */
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-blue,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-blue {
@@ -90,7 +90,7 @@
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-green,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-green {
   color: #fff;
-  background: #0f3fce; }
+  background: #18ce0f; }
 /* original green #18ce0f */
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-orange,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-orange {
@@ -2598,8 +2598,9 @@ body {
   background-color: #888 !important; }
 
 .bg-primary {
-  background-color: #378C3F !important; }
-
+  background-color: #8c5337 !important; }
+/*  background-color: #378C3F !important; }
+*/
 .bg-info {
   background-color: #2CA8FF !important; }
 
