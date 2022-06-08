@@ -1,0 +1,15 @@
+{
+    "name": "static-website",
+    "version": "1.0.0",
+    "description": "this is an example for a static website",
+    "main": "index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "css:scss": "node-sass --output-style compressed -o dist src/scss"
+    },
+    "author": "you",
+    "license": "ISC",
+    "devDependencies": {
+        "node-sass": "^4.13.1"
+    }
+}
