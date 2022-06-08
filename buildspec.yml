@@ -1,17 +1,21 @@
 version: 0.2
+
 phases:
-  pre_build:
+  install:
+    runtime-versions:
+      nodejs: 12
+   
     commands:
-      - echo Entered the install phase...
-      - npm install --global lerna 
-      - lerna bootstrap 
+        # install npm
+        - npm install
+       
   build:
     commands:
-      - npm run build
+        # run build script
+        - npm run-script build
+     
 artifacts:
-  baseDirectories: build
+  # include all files required to run application
+  # notably excluded is node_modules, as this will cause overwrite error on deploy
   files:
-    - '**/*'
-cache:
-  paths:
-    - node_modules/**/*
+    - index.html
